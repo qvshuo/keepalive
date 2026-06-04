@@ -10,7 +10,6 @@ Description=Keepalive fixed timer
 
 [Timer]
 OnCalendar=*-*-* 19:00:00
-AccuracySec=1min
 Persistent=true
 Unit=keepalive.service
 
@@ -56,9 +55,8 @@ import random
 import time
 
 urls = [
-    "https://releases.ubuntu.com/latest/ubuntu.iso",
-    "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian.iso",
-    "https://download.fedoraproject.org/pub/fedora/linux/releases/latest/Workstation/x86_64/iso/Fedora.iso",
+    "https://releases.ubuntu.com/26.04/ubuntu-26.04-desktop-amd64.iso",
+    "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso",
 ]
 
 start = time.time()
@@ -146,7 +144,7 @@ used_after = mem_after["MemTotal"] - mem_after["MemAvailable"]
 print(f"[python] CurrentUsed(after)={mb(used_after):.1f}MB, ratio={used_after / mem_after['MemTotal'] * 100:.1f}%")
 print("[python] memory stage done, holding RSS")
 
-busy_segments = [24 * 60, 24 * 60, 24 * 60]
+busy_segments = [25 * 60, 25 * 60, 25 * 60]
 sleep_segments = [9 * 60, 9 * 60]
 
 busy_time = 1.0
