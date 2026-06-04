@@ -9,7 +9,7 @@ cat > ~/.config/systemd/user/keepalive.timer <<'EOF'
 Description=Keepalive fixed timer
 
 [Timer]
-OnCalendar=*-*-* 03:00:00
+OnCalendar=Asia/Shanghai *-*-* 03:00:00
 AccuracySec=1min
 Persistent=true
 Unit=keepalive.service
@@ -26,8 +26,8 @@ Description=Keepalive workload pipeline
 Type=oneshot
 ExecStart=%h/.local/bin/keepalive.sh
 TimeoutStartSec=4h
-StandardOutput=journal
-StandardError=journal
+StandardOutput=append:/tmp/keepalive.log
+StandardError=append:/tmp/keepalive.log
 EOF
 
 cat > ~/.local/bin/keepalive.sh <<'EOF'
