@@ -9,7 +9,7 @@ cat > ~/.config/systemd/user/keepalive.timer <<'EOF'
 Description=Keepalive fixed timer
 
 [Timer]
-OnCalendar=*-*-* 19:00:00 UTC
+OnCalendar=*-*-* 19:00:00
 AccuracySec=1min
 Persistent=true
 Unit=keepalive.service
