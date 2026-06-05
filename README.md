@@ -148,7 +148,7 @@ busy_segments = [25 * 60, 25 * 60, 25 * 60]
 sleep_segments = [9 * 60, 9 * 60]
 
 busy_time = 1.0
-idle_time = 3.0
+idle_time = 1.0
 
 def burn_for(seconds):
     end = time.time() + seconds
