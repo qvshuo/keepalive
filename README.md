@@ -57,6 +57,9 @@ import time
 urls = [
     "https://releases.ubuntu.com/26.04/ubuntu-26.04-desktop-amd64.iso",
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso",
+    "https://download.opensuse.org/distribution/leap/16.1/offline/Leap-16.1-offline-installer-x86_64-Build30.3.install.iso",
+    "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/main/model.safetensors-00002-of-00002.safetensors?download=true",
+    "https://huggingface.co/google/gemma-4-E2B-it/resolve/main/model.safetensors?download=true",
 ]
 
 start = time.time()
